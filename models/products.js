@@ -26,7 +26,10 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     color: DataTypes.STRING,
     quantity: DataTypes.INTEGER,
-    type: DataTypes.ENUM,
+    type:{
+      type: DataTypes.ENUM,
+      values: ['Men','Women']
+    },
     business_id: DataTypes.INTEGER,
     category_id: DataTypes.INTEGER
   }, {
