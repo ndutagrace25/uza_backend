@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
-const app =express();
+const app = express();
 
 app.use((req,res,next)=>{
     res.header("Access-Control-Allow-Origin", "*");
@@ -30,11 +30,15 @@ app.use(
 
 const {
     businesses,
+    requests,
+    categories,
     products,
     users
 } = require("./routes");
 
 app.use("/businesses", businesses);
+app.use("/requests", requests);
+app.use("/categories", categories);
 // app.use("/product", product);
 // app.use("/user", user);
 module.exports = app;
