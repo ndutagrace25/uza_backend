@@ -11,12 +11,6 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      brand: {
-        type: Sequelize.STRING
-      },
-      size: {
-        type: Sequelize.STRING
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
