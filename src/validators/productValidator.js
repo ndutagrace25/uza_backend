@@ -44,14 +44,14 @@ module.exports = {
     specificPrdct(info){
         let error = {}
         if(isEmpty(info)){
-            error.id = "Provide Product id"
+            error.id = "Provide Product id param"
         }
         return{error, isValid:isEmpty(error)}
     },
     byCategory(info){
         let error = {}
         if(isEmpty(info)){
-            error.id = "Provide Category id"
+            error.id = "Provide Category id param"
         }
         return{error, isValid:isEmpty(error)}
     }
