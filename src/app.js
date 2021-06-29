@@ -39,6 +39,6 @@ const {
 app.use("/businesses", businesses);
 app.use("/requests", requests);
 app.use("/categories", categories);
-// app.use("/product", product);
-// app.use("/user", user);
+app.use("/products", products);
+app.use("/users", users);
 module.exports = app;
