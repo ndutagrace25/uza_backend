@@ -15,5 +15,9 @@ module.exports = {
             result({Error:error},null)
         }
     },
-    
+    getRequests(result){
+        Requests.findAll().then(requests=>{
+            result(null, requests)
+        }).catch(err=>result({Error: err},null))
+    }
 }
