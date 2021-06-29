@@ -11,4 +11,13 @@ router.post("/create", (req,res)=>{
         }
     })
 })
+router.get("/all", (req,res)=>{
+    requestController.getRequests(req.body, (error,success)=>{
+        if(error){
+            res.status(400).json(error)
+        }else{
+            res.status(200).json(success)
+        }
+    })
+})
 module.exports= router
