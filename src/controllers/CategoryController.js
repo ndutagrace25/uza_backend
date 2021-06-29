@@ -17,7 +17,7 @@ module.exports = {
         const {error, isValid} = validator.editCat(catInfo)
         if(isValid){
             //Ensure the id provided exists
-            Category.findByPk(catInfo.category_id).then(catfound=>{
+            Category.findByPk(parseInt(catInfo.category_id)).then(catfound=>{
                 if(catfound!==null){
                     catfound.update({
                         name: catInfo.name
